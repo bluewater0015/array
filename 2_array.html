@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>数组的方法</title>
+</head>
+<body>
+	<script>
+		//push
+		var arr = [2,3,6,7];
+		console.log(arr.push(3,4,5,6));	//8
+		console.log(arr);	//[2,3,6,7,3,4,5,6]
+		//pop
+		var arr = [2,3,4,5];
+		console.log(arr.pop());	//5
+		console.log(arr);	//[2,3,4]
+		//shift
+		var arr = [2,3,5];
+		console.log(arr.shift()); //2
+		console.log(arr); //[3,5]
+
+		//unshift()
+		var arr = [2,4,5];
+		console.log(arr.unshift(11,22)); //5
+		console.log(arr); //[11,22,2,4,5]
+		//concat()
+		var arr = [1,24,4];
+		console.log(arr.concat(2,3)); //[1,24,4,2,3]
+		console.log(arr);	//原数组不改变
+		//slice(start,end)
+		var arr = [2,3,5,7,8,9];
+		console.log(arr.slice(2,4));	//[5,7]
+		console.log(arr); //[2,3,5,7,8,9] 原数组改变
+		//splice(index,howmany,item1,item2,item3,……)
+		//第一个参数 要添加/删除的下标
+		//第二个参数 删除的长度
+		//第三个参数 要添加的内容
+		var arr = [2,3,4,5,6,7,8];
+		//删除
+		console.log(arr.splice(1,2)); //[3,4]
+		console.log(arr); //[2,5,6,7,8]  //原数组改变
+		//添加
+		var arr = [3,4,5,6,7];
+		console.log(arr.splice(1,0,"xiao")); //[]
+		console.log(arr); //[3,"xiao",4,5,6,7]
+		//替换
+		var arr = [2,3,5,7,8];
+		console.log(arr.splice(1,1,"huang")); //[3]
+		console.log(arr); //[2,"huang",5,7,8]
+		//总结
+		//当howmany为0时  	添加元素
+				 //为1时	替换元素
+	</script>
+</body>
+</html>
